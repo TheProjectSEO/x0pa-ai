@@ -848,6 +848,9 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
 </div>
 
 <script>
+// ─── Charts state (declared FIRST to avoid TDZ when showContent runs from cached auth) ───
+let chartsInited = false;
+
 // ─── Password gate ───
 const PW_HASH = '7f26104f77a7ce477546cd1ea99b6c99b5eb079e3ec9238583314eccea00440a';
 async function sha256(str){
@@ -885,7 +888,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // ─── Charts ───
-let chartsInited = false;
 function initCharts(){
   if(chartsInited) return;
   chartsInited = true;

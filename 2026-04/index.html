@@ -221,17 +221,27 @@ main { max-width: 1280px; margin: 0 auto; padding: 28px 24px 80px; }
 .summary-bullets { list-style: none; counter-reset: bullet; }
 .summary-bullets li {
   counter-increment: bullet;
-  padding: 14px 16px 14px 48px; position: relative;
+  padding: 18px 20px 18px 52px; position: relative;
   background: var(--bg); border: 1px solid var(--border);
   border-radius: 10px; margin-bottom: 10px; font-size: 13.5px; line-height: 1.6;
 }
 .summary-bullets li::before {
-  content: counter(bullet); position: absolute; left: 14px; top: 14px;
-  width: 24px; height: 24px; background: var(--brand); color: white;
+  content: counter(bullet); position: absolute; left: 14px; top: 16px;
+  width: 26px; height: 26px; background: var(--brand); color: white;
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 12px;
 }
-.summary-bullets li strong { color: var(--ink); }
+.summary-bullets li strong {
+  display: block;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+/* Callouts — give bold a line break treatment too */
+.callout strong { display: block; font-size: 14.5px; margin-bottom: 6px; letter-spacing: -0.1px; }
+.callout strong + br { display: none; }
 
 /* ── Keyword position cards ── */
 .kw-card {
@@ -313,9 +323,9 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Q1 2026 Progress</div>
-    <h1>Google organic clicks tripled and average ranking moved from page 2 to page 1 in 90 days.</h1>
+    <h1>Google organic clicks tripled. Rankings moved from page 2 to page 1.</h1>
     <p class="hero-lede">
-      Google Search Console clicks climbed from 5,431 in January to <strong>18,204 in March</strong> (+235%), with impressions up 213% to 5.15M. Average position improved from 14.9 to <strong>7.8</strong> — a 7-position climb on a volume-weighted basis. AI search engines (ChatGPT, Perplexity, Gemini, Copilot, Claude) referred <strong>1,429 additional sessions</strong> in Q1 and are growing month over month.
+      GSC clicks 5,431 → <strong>18,204</strong> (+235%). Impressions up 213%. Avg position 14.9 → <strong>7.8</strong>. AI search referrals: <strong>1,429 sessions</strong> across ChatGPT, Perplexity, Gemini, Copilot, Claude — growing MoM.
     </p>
     <div class="hero-stats">
       <div>
@@ -350,6 +360,7 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
     <button class="tab-btn" data-tab="keywords">Commercial Keywords</button>
     <button class="tab-btn" data-tab="aeo">AEO &amp; AI Search</button>
     <button class="tab-btn" data-tab="competitive">Competitive</button>
+    <button class="tab-btn" data-tab="technical">Technical Wins</button>
     <button class="tab-btn" data-tab="next">What's Next</button>
   </div>
 </nav>
@@ -366,10 +377,10 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
     </div>
     <div class="section-body">
       <ol class="summary-bullets">
-        <li><strong>Google organic traffic tripled in 90 days.</strong> GSC clicks grew from 5,431 (Jan) to 18,204 (Mar), impressions from 1.64M to 5.15M, and average ranking improved from 14.9 to 7.8 — a meaningful move from page 2 to page 1 across the ranked keyword base.</li>
-        <li><strong>Rankings improved on every commercial keyword that matters.</strong> "AI recruitment software" moved from position 37 to 17. "AI hiring software" from 41 to 14. "AI recruitment" from 72 to 27. "AI screening" from 32 to position 3.6. Four <em>new</em> commercial keywords started ranking in February: AI sourcing, AI hiring platform, AI applicant tracking system, AI in recruiting — all entering at positions 29–48.</li>
-        <li><strong>AI search referrals are validated and growing.</strong> 1,429 sessions Jan–Mar from ChatGPT, Perplexity, Gemini, Copilot, and Claude combined (GA4 source/medium data). ChatGPT alone: 179 → 388 → 483 sessions per month. This surface is compounding as AI search adoption expands.</li>
-        <li><strong>Lead attribution is a known gap right now.</strong> X0PA migrated CRM from HubSpot to Freshsales. During migration, UTM capture was not wired on the 15 lead-capture forms — so 99.8% of new contacts currently land with source = "Unknown." Freshsales does show 348 new contacts in March + 21 deals in Q1 — volume is tracked, organic attribution is not yet. Fixing this is the single highest-leverage next action to close the full funnel loop.</li>
+        <li><strong>Organic traffic tripled in 90 days.</strong>Clicks 5,431 → 18,204. Impressions 1.64M → 5.15M. Avg position 14.9 → 7.8 — page 2 to page 1.</li>
+        <li><strong>Commercial keywords climbed meaningfully.</strong>"AI recruitment software" 37 → 17. "AI hiring software" 41 → 14. "AI screening" 32 → 3.6. Four new commercial keywords entered in February: AI sourcing, AI hiring platform, AI applicant tracking system, AI in recruiting.</li>
+        <li><strong>AI search is now a real traffic source.</strong>1,429 sessions in Q1 from ChatGPT, Perplexity, Gemini, Copilot, Claude. ChatGPT alone: 179 → 388 → 483 MoM.</li>
+        <li><strong>Lead attribution is the open gap.</strong>HubSpot → Freshsales migration left UTM capture unwired on 15 forms, so 99.8% of new contacts land as "Unknown." Freshsales shows 348 new contacts in March + 21 Q1 deals. Fix this and we close the loop.</li>
       </ol>
     </div>
   </div>
@@ -425,7 +436,8 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
         </tbody>
       </table>
       <div class="callout info">
-        <strong>Read.</strong> GSC clicks and GA4 google/organic align within 5% for March (18,204 vs 19,017) — the organic growth is real and validated against two independent sources. Google paid spend peaked in February (41K) then reduced back to January levels in March, while organic kept climbing. Bing paid has been reduced materially (−46%). The growth engine shifted from paid to organic across Q1.
+        <strong>The growth engine shifted from paid to organic.</strong>
+        GSC and GA4 google/organic match within 5% — growth is real and cross-validated. Google paid peaked in February then pulled back. Bing paid cut by 46%. Organic kept climbing.
       </div>
     </div>
   </div>
@@ -566,7 +578,8 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
       </div>
 
       <div class="callout">
-        <strong>Why this section matters.</strong> Brand search ("x0pa ai", "xopa ai") is saturated and ranking 1–3 — no more headroom there. The growth surface is the commercial keyword cluster: AI recruitment software (17), AI hiring software (14), AI recruiter (5). Pushing any of these into position 1–3 adds meaningful high-intent traffic directly correlated with demo request volume.
+        <strong>The growth surface is commercial, not brand.</strong>
+        Brand keywords (x0pa ai, xopa ai) are saturated at positions 1–3 — no headroom. The cluster to push is commercial: AI recruitment software (17), AI hiring software (14), AI recruiter (5). Any one of these into top 3 adds high-intent demo traffic.
       </div>
 
     </div>
@@ -624,11 +637,13 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
       </table>
 
       <div class="callout success">
-        <strong>The trajectory is what matters here.</strong> MoM growth of 290 → 518 → 621 confirms AI-originated traffic is expanding in step with the Ahrefs citation count. Treat the absolute number as a floor, not a ceiling — real AI-driven session volume is higher because referrer-stripping in mobile AI apps is common.
+        <strong>Trajectory is the signal.</strong>
+        290 → 518 → 621 MoM. Treat the absolute as a floor — mobile AI apps often strip referrers, so real volume is higher.
       </div>
 
       <div class="callout">
-        <strong>Ahrefs citation surface.</strong> Per the latest Ahrefs Brand Radar snapshot (17 April 2026), x0pa.com is cited in <strong>311 Google AI Overview responses</strong> across 89 pages, <strong>47 ChatGPT citations</strong> across 34 pages, plus Gemini (17), Perplexity (5), and Copilot (5). The GA4 traffic above is what those citations are converting to in real user behavior.
+        <strong>Ahrefs Brand Radar (17 April 2026).</strong>
+        311 Google AI Overview citations across 89 pages. 47 ChatGPT citations across 34 pages. Gemini 17, Perplexity 5, Copilot 5.
       </div>
     </div>
   </div>
@@ -679,7 +694,8 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
       </table>
 
       <div class="callout">
-        <strong>Honest read.</strong> Competitors held their organic traffic roughly flat while losing long-tail keyword coverage (−16% to −40%). This indicates their core money pages still work but their breadth is contracting. X0PA grew on both dimensions simultaneously — keywords +159%, traffic +251% — which is the clean indicator of genuine topic authority expansion rather than a single page spike.
+        <strong>X0PA grew breadth and depth; competitors shrank breadth only.</strong>
+        Competitors held traffic roughly flat while losing long-tail keywords (−16% to −40%) — core money pages still work, coverage is contracting. X0PA grew both dimensions: keywords +159%, traffic +251%. That's topic authority expansion, not a single-page spike.
       </div>
 
       <h3 class="sh">X0PA Referring Domains — Monthly</h3>
@@ -696,6 +712,81 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
   </div>
 </div>
 
+<!-- ─────────── Technical Wins ─────────── -->
+<div class="tab-panel" id="panel-technical">
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Site Infrastructure Improvements — Q1 2026</div>
+      <div class="section-desc">Three technical wins shipped this quarter that directly support the traffic growth above.</div>
+    </div>
+    <div class="section-body">
+
+      <ol class="summary-bullets">
+        <li>
+          <strong>Removed Elementor dependency entirely.</strong>
+          Pages now ship clean, faster HTML — no page-builder overhead, smaller JS payload, cleaner DOM for crawlers.
+        </li>
+        <li>
+          <strong>Server response time dropped from 400–600 ms to under 200 ms (since 18 March).</strong>
+          Faster response = more pages Googlebot crawls per session = more of the site indexed, faster.
+        </li>
+        <li>
+          <strong>Average keyword ranking is the highest in 16 months and still climbing.</strong>
+          16-month trajectory: position 45 → 7.2 on a volume-weighted basis.
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Crawl Response Time — Googlebot View</div>
+      <div class="section-desc">GSC Crawl Stats. Average response time dropped sharply after the 18 March infrastructure work.</div>
+    </div>
+    <div class="section-body">
+      <img src="../assets/crawl-response-time.png" alt="GSC Crawl Stats — response time" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      <div class="callout">
+        <strong>Before:</strong>
+        400–600 ms average response on every Googlebot request. High variance. The Jan–mid-March line is jagged.
+      </div>
+      <div class="callout success">
+        <strong>After (since 18 March):</strong>
+        Consistently under 200 ms. Latest reading: ~150 ms. Google can now crawl roughly 2.5× more pages in the same crawl budget.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">GSC Click Milestones — Consistent Weekly Growth</div>
+      <div class="section-desc">Google Search Console automatically flags each new traffic milestone. Four in a row hit in March.</div>
+    </div>
+    <div class="section-body">
+      <img src="../assets/gsc-milestones.png" alt="GSC Search Impact milestones" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      <div class="callout">
+        <strong>What this means.</strong>
+        Click volume is increasing every week, not just peaking once. That consistency is what we'll use as the foundation for launching the full feature-pages rollout (see What's Next).
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Average Position — 16-Month View</div>
+      <div class="section-desc">Longer window. Confirms the Q1 improvement is part of a sustained trend, not a single-month spike.</div>
+    </div>
+    <div class="section-body">
+      <img src="../assets/gsc-16mo-position.png" alt="GSC 16-month average position" style="width:100%;border-radius:8px;border:1px solid var(--border)">
+      <div class="callout success">
+        <strong>Current average position: 7.2 (1–15 April snapshot).</strong>
+        Highest in the 16-month GSC history window. Dec 2024 baseline was ~45 — that's a 38-position improvement sustained across 16 months of SEO work.
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- ─────────── What's Next ─────────── -->
 <div class="tab-panel" id="panel-next">
   <div class="section">
@@ -706,14 +797,31 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
     <div class="section-body">
 
       <ol class="summary-bullets">
-        <li><strong>Commercial keyword push.</strong> "AI recruitment software" (pos 17), "AI hiring software" (pos 14), "AI recruiter" (pos 5) are within striking distance of page 1 / top 3. On-page optimization + internal linking campaign across these three pages. Target: one keyword into top 3 by end of May.</li>
-        <li><strong>Feature pages expansion.</strong> /features/job-posting/ and /features/recruitment-dashboard/ launched but not yet indexed with search presence. April work: submit for indexing, add internal linking, optimize for target commercial keywords. Additional feature pages in planning — candidate templates: /features/candidate-screening/, /features/ai-interview/, /features/candidate-matching/.</li>
-        <li><strong>Attribution fix (HubSpot → Freshsales migration).</strong> The CRM migration is complete, but UTM capture was not carried over — 99.8% of Freshsales contacts currently have source = "Unknown." Engineering dependency: deploy UTM parameter capture on the 15 lead-capture forms and map to <code>cf_traffic_source</code> in Freshsales. Once shipped, we close the full loop and the May report includes <em>organic-attributed</em> leads and deals for the first time.</li>
-        <li><strong>Bottom funnel deepening.</strong> Dedicated work to strengthen commercial pages: schema enhancement on /ai-recruiter/ and /ai-recruitment/, conversion-focused copy tests, improved internal linking from calculator and glossary pages to feature/product pages.</li>
+        <li>
+          <strong>Launch 58 feature pages in 40 days.</strong>
+          One page per day under <code>/features/</code>. Every card on the features hub gets its own dedicated page — targeted commercial keywords per page (job posting, recruitment dashboard, candidate screening, AI interview, candidate matching, etc.).
+        </li>
+        <li>
+          <strong>Integrated Google Ads + SEO strategy.</strong>
+          Audit every paid-bidding keyword and map it against organic coverage. Where we already rank, pause or reduce paid. Where we don't, use paid to reach the top while organic catches up. Single spreadsheet feeds both teams.
+        </li>
+        <li>
+          <strong>Commercial keyword push to page 1.</strong>
+          "AI recruitment software" (17), "AI hiring software" (14), "AI recruiter" (5) — all within striking distance. On-page optimization + internal links from the 58 new feature pages. Target: one into top 3 by end of May.
+        </li>
+        <li>
+          <strong>Enable CDN for page speed.</strong>
+          Builds on the 200 ms response-time win. CDN adds edge caching across geographies — further improves Core Web Vitals and international search performance.
+        </li>
+        <li>
+          <strong>Fix attribution (HubSpot → Freshsales UTM gap).</strong>
+          Deploy UTM capture on the 15 lead-capture forms, map to <code>cf_traffic_source</code> in Freshsales. May report then includes organic-attributed contact and deal volume for the first time.
+        </li>
       </ol>
 
       <div class="callout info">
-        <strong>What changes in the May report.</strong> With UTM capture deployed and feature pages indexed, we'll report: (1) organic-attributed contact and deal volume from Freshsales, (2) first-click and first-impression data for the new feature pages, (3) movement on commercial keyword rankings, and (4) continued Q2 trend on AI search referrals.
+        <strong>What changes in the May report.</strong>
+        UTM capture deployed = organic-attributed leads visible. 20–25 new feature pages live = first impressions and clicks landing. CDN = Core Web Vitals improved. One commercial keyword should hit top 3.
       </div>
     </div>
   </div>

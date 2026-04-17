@@ -384,14 +384,15 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
         <div class="chart-box"><canvas id="chartOrganic"></canvas></div>
       </div>
       <table class="dt">
-        <thead><tr><th>Month</th><th>GSC Clicks</th><th>GSC Impressions</th><th>Avg Position</th><th>GA4 Organic Sessions</th></tr></thead>
+        <thead><tr><th>Month</th><th>GSC Clicks</th><th>GSC Impressions</th><th>Avg Position</th><th>GA4 google/organic</th></tr></thead>
         <tbody>
-          <tr><td>Jan 2026</td><td>5,431</td><td>1,644,057</td><td>14.9</td><td>11,437</td></tr>
-          <tr><td>Feb 2026</td><td>8,382</td><td>2,276,523</td><td>12.5</td><td>20,322</td></tr>
-          <tr class="highlight"><td>Mar 2026</td><td>18,204</td><td>5,147,901</td><td>7.8</td><td>40,533</td></tr>
-          <tr><td>Δ Jan → Mar</td><td class="text-up">+235%</td><td class="text-up">+213%</td><td class="text-up">+7.1 pos</td><td class="text-up">+254%</td></tr>
+          <tr><td>Jan 2026</td><td>5,431</td><td>1,644,057</td><td>14.9</td><td>6,077</td></tr>
+          <tr><td>Feb 2026</td><td>8,382</td><td>2,276,523</td><td>12.5</td><td>10,650</td></tr>
+          <tr class="highlight"><td>Mar 2026</td><td>18,204</td><td>5,147,901</td><td>7.8</td><td>19,017</td></tr>
+          <tr><td>Δ Jan → Mar</td><td class="text-up">+235%</td><td class="text-up">+213%</td><td class="text-up">+7.1 pos</td><td class="text-up">+213%</td></tr>
         </tbody>
       </table>
+      <p class="text-muted" style="font-size:12px;margin-top:8px">GA4 google/organic column uses source/medium dimension (not channel grouping) — this cross-validates with GSC clicks to within 5% in March.</p>
     </div>
   </div>
 
@@ -401,28 +402,28 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
 <div class="tab-panel" id="panel-traffic">
   <div class="section">
     <div class="section-head">
-      <div class="section-title">Channel Mix Shift — Organic Overtakes Paid</div>
-      <div class="section-desc">GA4 sessions by channel, Jan–Mar 2026. Organic Search went from 12% of total sessions in January to 27% in March, while Paid Search declined from 59% to 19%.</div>
+      <div class="section-title">Traffic Source Breakdown — Organic Now Tracking Up, Paid Flat</div>
+      <div class="section-desc">Source-and-medium view from GA4, cross-validated against GSC on the Google organic row. Jan – Mar 2026.</div>
     </div>
     <div class="section-body">
       <div class="chart-wrap">
-        <div class="chart-title">GA4 Sessions by Channel — Monthly</div>
-        <div class="chart-subtitle">Organic Search, Paid Search, Direct, Referral, Display</div>
+        <div class="chart-title">Google Organic vs Paid — Monthly</div>
+        <div class="chart-subtitle">GSC clicks (Google organic) + GA4 google/cpc + GA4 bing/cpc</div>
         <div class="chart-box"><canvas id="chartChannels"></canvas></div>
       </div>
       <table class="dt">
-        <thead><tr><th>Channel</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Δ Jan → Mar</th></tr></thead>
+        <thead><tr><th>Source</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Δ Jan → Mar</th></tr></thead>
         <tbody>
-          <tr class="highlight"><td>Organic Search</td><td>11,437</td><td>20,322</td><td>40,533</td><td class="text-up">+254%</td></tr>
-          <tr><td>Paid Search</td><td>56,001</td><td>65,284</td><td>28,478</td><td class="text-down">−49%</td></tr>
-          <tr><td>Direct</td><td>13,416</td><td>17,247</td><td>22,560</td><td class="text-up">+68%</td></tr>
-          <tr><td>Referral</td><td>7,992</td><td>14,639</td><td>21,177</td><td class="text-up">+165%</td></tr>
-          <tr><td>Display</td><td>4,129</td><td>5,730</td><td>20,705</td><td class="text-up">+401%</td></tr>
-          <tr><td><strong>Total sessions</strong></td><td>95,299</td><td>128,359</td><td>147,437</td><td class="text-up">+55%</td></tr>
+          <tr class="highlight"><td>Google organic (GSC clicks)</td><td>5,431</td><td>8,382</td><td>18,204</td><td class="text-up">+235%</td></tr>
+          <tr><td>Google organic (GA4 validation)</td><td>6,077</td><td>10,650</td><td>19,017</td><td class="text-up">+213%</td></tr>
+          <tr><td>Bing organic</td><td>678</td><td>786</td><td>893</td><td class="text-up">+32%</td></tr>
+          <tr><td>Google paid (cpc)</td><td>25,412</td><td>41,103</td><td>28,342</td><td>+12%</td></tr>
+          <tr><td>Bing paid (cpc)</td><td>12,918</td><td>5,677</td><td>6,928</td><td class="text-down">−46%</td></tr>
+          <tr><td>Direct</td><td>8,463</td><td>10,946</td><td>12,988</td><td class="text-up">+53%</td></tr>
         </tbody>
       </table>
       <div class="callout info">
-        <strong>Read.</strong> Paid Search spending reduced while Organic Search filled the gap and then some. Organic is now generating 194 key events per month vs. Paid's 73 — organic is producing 2.6× more demo interactions than paid, at zero incremental cost per click.
+        <strong>Read.</strong> GSC clicks and GA4 google/organic align within 5% for March (18,204 vs 19,017) — the organic growth is real and validated against two independent sources. Google paid spend peaked in February (41K) then reduced back to January levels in March, while organic kept climbing. Bing paid has been reduced materially (−46%). The growth engine shifted from paid to organic across Q1.
       </div>
     </div>
   </div>
@@ -863,24 +864,24 @@ function initCharts(){
     }
   });
 
-  // Channel mix stacked
+  // Source breakdown — validated numbers only
   new Chart(document.getElementById('chartChannels'), {
     type: 'bar',
     data: {
       labels: months,
       datasets: [
-        { label: 'Organic Search', data: [11437, 20322, 40533], backgroundColor: BRAND, borderRadius: 3 },
-        { label: 'Paid Search', data: [56001, 65284, 28478], backgroundColor: ACCENT, borderRadius: 3 },
-        { label: 'Direct', data: [13416, 17247, 22560], backgroundColor: BRAND_LIGHT, borderRadius: 3 },
-        { label: 'Referral', data: [7992, 14639, 21177], backgroundColor: SUCCESS, borderRadius: 3 },
-        { label: 'Display', data: [4129, 5730, 20705], backgroundColor: '#8b5cf6', borderRadius: 3 },
+        { label: 'Google organic (GSC)', data: [5431, 8382, 18204], backgroundColor: BRAND, borderRadius: 3 },
+        { label: 'Google paid (cpc)', data: [25412, 41103, 28342], backgroundColor: ACCENT, borderRadius: 3 },
+        { label: 'Bing paid (cpc)', data: [12918, 5677, 6928], backgroundColor: '#fcd34d', borderRadius: 3 },
+        { label: 'Bing organic', data: [678, 786, 893], backgroundColor: BRAND_LIGHT, borderRadius: 3 },
+        { label: 'Direct', data: [8463, 10946, 12988], backgroundColor: GREY, borderRadius: 3 },
       ]
     },
     options: {
       maintainAspectRatio: false,
       scales: {
-        x: { stacked: true, grid: { display: false } },
-        y: { stacked: true, beginAtZero: true, grid: { color: '#f1f4fa' } }
+        x: { grid: { display: false } },
+        y: { beginAtZero: true, grid: { color: '#f1f4fa' } }
       }
     }
   });

@@ -33,15 +33,12 @@
   --radius: 10px;
   --shadow-sm: 0 1px 2px rgba(10,19,48,0.04);
   --shadow: 0 2px 8px rgba(10,19,48,0.06), 0 1px 3px rgba(10,19,48,0.04);
-  --shadow-lg: 0 8px 24px rgba(10,19,48,0.08);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  font-size: 14px;
-  line-height: 1.55;
+  background: var(--bg); color: var(--ink);
+  font-size: 14px; line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -56,22 +53,17 @@ body {
   max-width: 400px; width: 90%;
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
-.gate-logo {
-  font-weight: 800; font-size: 22px; color: var(--brand); margin-bottom: 8px;
-  letter-spacing: -0.5px;
-}
+.gate-logo-img { height: 38px; margin-bottom: 18px; display: block; }
 .gate-sub { color: var(--ink-light); margin-bottom: 24px; font-size: 13px; }
 .gate-input {
   width: 100%; padding: 12px 14px; border: 1.5px solid var(--border);
-  border-radius: 8px; font-size: 14px; font-family: inherit;
-  outline: none; transition: border 0.15s;
+  border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; transition: border 0.15s;
 }
 .gate-input:focus { border-color: var(--brand); }
 .gate-btn {
   width: 100%; margin-top: 12px; padding: 12px;
   background: var(--brand); color: white; border: none;
-  border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer;
-  transition: background 0.15s;
+  border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; transition: background 0.15s;
 }
 .gate-btn:hover { background: var(--brand-dark); }
 .gate-err { color: var(--danger); font-size: 12px; margin-top: 10px; display: none; }
@@ -83,23 +75,19 @@ body {
 }
 .header-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center; justify-content: space-between; height: 64px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
 }
-.brand-row { display: flex; align-items: center; gap: 12px; }
-.logo-mark {
-  width: 32px; height: 32px; background: var(--brand);
-  border-radius: 7px; display: flex; align-items: center; justify-content: center;
-  color: white; font-weight: 800; font-size: 13px; letter-spacing: -0.5px;
-}
-.brand-text { font-weight: 700; font-size: 15px; color: var(--ink); letter-spacing: -0.2px; }
-.brand-sub { font-size: 12px; color: var(--ink-light); }
+.brand-row { display: flex; align-items: center; gap: 14px; }
+.brand-logo { height: 32px; }
+.brand-divider { width: 1px; height: 24px; background: var(--border); }
+.brand-sub { font-size: 13px; color: var(--ink-light); font-weight: 500; }
 .header-meta { text-align: right; font-size: 12px; color: var(--ink-light); }
 .header-meta strong { color: var(--ink); font-weight: 600; }
 
 /* ── Hero ── */
 .hero {
   background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-  color: white; padding: 48px 0 40px;
+  color: white; padding: 44px 0 36px;
 }
 .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 .hero-eyebrow {
@@ -108,7 +96,7 @@ body {
   font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 14px;
 }
 .hero h1 {
-  font-size: 32px; font-weight: 800; letter-spacing: -0.8px; line-height: 1.15;
+  font-size: 30px; font-weight: 800; letter-spacing: -0.8px; line-height: 1.2;
   max-width: 780px; margin-bottom: 12px;
 }
 .hero-lede {
@@ -128,7 +116,7 @@ body {
 /* ── Tab Nav ── */
 .tab-nav {
   background: white; border-bottom: 1px solid var(--border);
-  position: sticky; top: 64px; z-index: 99;
+  position: sticky; top: 68px; z-index: 99;
 }
 .tab-nav-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -145,7 +133,7 @@ body {
 .tab-btn.active { color: var(--brand); border-bottom-color: var(--brand); }
 
 /* ── Main ── */
-main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
+main { max-width: 1280px; margin: 0 auto; padding: 28px 24px 80px; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
@@ -153,18 +141,10 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
   background: white; border: 1px solid var(--border); border-radius: 12px;
   margin-bottom: 20px; box-shadow: var(--shadow-sm);
 }
-.section-head {
-  padding: 20px 24px 16px; border-bottom: 1px solid var(--border-light);
-}
+.section-head { padding: 20px 24px 16px; border-bottom: 1px solid var(--border-light); }
 .section-title {
   font-size: 18px; font-weight: 700; color: var(--ink);
-  letter-spacing: -0.3px; display: flex; align-items: center; gap: 10px;
-}
-.section-num {
-  background: var(--brand-soft); color: var(--brand);
-  width: 26px; height: 26px; border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700;
+  letter-spacing: -0.3px;
 }
 .section-desc { font-size: 13px; color: var(--ink-light); margin-top: 6px; line-height: 1.5; }
 .section-body { padding: 20px 24px 24px; }
@@ -195,10 +175,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 .kpi-delta.flat { background: var(--border-light); color: var(--ink-light); }
 
 /* ── Tables ── */
-.dt {
-  width: 100%; border-collapse: collapse; margin: 8px 0;
-  font-variant-numeric: tabular-nums;
-}
+.dt { width: 100%; border-collapse: collapse; margin: 8px 0; font-variant-numeric: tabular-nums; }
 .dt thead th {
   background: var(--bg); text-align: left; padding: 10px 12px;
   font-size: 11px; font-weight: 700; color: var(--ink-mid);
@@ -221,11 +198,10 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
   background: var(--bg-card); border: 1px solid var(--border);
   border-radius: 10px; padding: 20px; margin: 16px 0;
 }
-.chart-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
-.chart-box { position: relative; height: 280px; }
-.chart-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;
-}
+.chart-title { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.chart-subtitle { font-size: 12px; color: var(--ink-light); margin-bottom: 14px; }
+.chart-box { position: relative; height: 300px; }
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
 
 /* ── Callout ── */
 .callout {
@@ -236,18 +212,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 .callout strong { color: var(--ink); }
 .callout.warn { background: var(--accent-soft); border-left-color: var(--accent); }
 .callout.success { background: var(--success-soft); border-left-color: var(--success); }
-
-/* ── Compare grid ── */
-.vs-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0;
-}
-.vs-card {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 10px; padding: 16px;
-}
-.vs-head { font-size: 12px; font-weight: 600; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 10px; }
-.vs-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 13px; }
-.vs-row strong { color: var(--ink); }
+.callout.info { background: #f0f7ff; border-left-color: #3b82f6; }
 
 /* ── Summary cards ── */
 .summary-bullets { list-style: none; counter-reset: bullet; }
@@ -255,7 +220,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
   counter-increment: bullet;
   padding: 14px 16px 14px 48px; position: relative;
   background: var(--bg); border: 1px solid var(--border);
-  border-radius: 10px; margin-bottom: 10px; font-size: 13px; line-height: 1.6;
+  border-radius: 10px; margin-bottom: 10px; font-size: 13.5px; line-height: 1.6;
 }
 .summary-bullets li::before {
   content: counter(bullet); position: absolute; left: 14px; top: 14px;
@@ -264,6 +229,22 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
   font-weight: 700; font-size: 12px;
 }
 .summary-bullets li strong { color: var(--ink); }
+
+/* ── Keyword position cards ── */
+.kw-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.kw-card-left { flex: 1; }
+.kw-name { font-weight: 600; color: var(--ink); font-size: 13.5px; }
+.kw-meta { font-size: 11px; color: var(--ink-light); margin-top: 2px; }
+.kw-card-right { display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; }
+.kw-pos-old { color: var(--ink-faint); font-size: 12px; text-decoration: line-through; }
+.kw-arrow { color: var(--ink-faint); font-size: 12px; }
+.kw-pos-new { color: var(--success); font-weight: 700; font-size: 15px; }
+.kw-delta { background: var(--success-soft); color: var(--success); padding: 3px 8px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+.kw-new { background: var(--accent-soft); color: var(--accent); padding: 3px 8px; border-radius: 100px; font-size: 11px; font-weight: 700; }
 
 /* ── Footer ── */
 .page-footer {
@@ -283,13 +264,15 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 .pill.brand { background: var(--brand-soft); color: var(--brand); }
 .pill.accent { background: var(--accent-soft); color: var(--accent); }
 .pill.success { background: var(--success-soft); color: var(--success); }
+.pill.danger { background: var(--danger-soft); color: var(--danger); }
+
+h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12px; }
 
 @media (max-width: 960px) {
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { grid-template-columns: repeat(2, 1fr); }
   .chart-grid { grid-template-columns: 1fr; }
-  .vs-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 26px; }
+  .hero h1 { font-size: 24px; }
 }
 </style>
 </head>
@@ -298,7 +281,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 <!-- ═══════════ Password Gate ═══════════ -->
 <div class="gate" id="gate">
   <div class="gate-card">
-    <div class="gate-logo">X0PA Intelligence</div>
+    <img src="../assets/logo-x0pa.webp" alt="X0PA AI" class="gate-logo-img">
     <div class="gate-sub">SEO Progress Report — April 2026. Enter access code to continue.</div>
     <input type="password" id="gate-pw" class="gate-input" placeholder="Access code" autofocus>
     <button class="gate-btn" onclick="checkPw()">Access Report</button>
@@ -312,15 +295,13 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 <header class="site-header">
   <div class="header-inner">
     <div class="brand-row">
-      <div class="logo-mark">X0</div>
-      <div>
-        <div class="brand-text">X0PA AI Intelligence</div>
-        <div class="brand-sub">SEO Progress Report</div>
-      </div>
+      <img src="../assets/logo-x0pa.webp" alt="X0PA AI" class="brand-logo">
+      <div class="brand-divider"></div>
+      <div class="brand-sub">SEO Progress Report</div>
     </div>
     <div class="header-meta">
       <strong>April 2026</strong><br>
-      Jan 1 → Mar 31, 2026
+      Reporting period: Jan 1 → Mar 31, 2026
     </div>
   </div>
 </header>
@@ -328,31 +309,31 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 <!-- ═══════════ Hero ═══════════ -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Quarter in Review</div>
-    <h1>X0PA is the only player growing in AI recruitment SEO — while competitors shed 6,559 keywords combined.</h1>
+    <div class="hero-eyebrow">Q1 2026 Progress</div>
+    <h1>Google organic clicks tripled and average ranking moved from page 2 to page 1 in 90 days.</h1>
     <p class="hero-lede">
-      Organic clicks up <strong>+235%</strong>, impressions up <strong>+213%</strong>, and average Google position moved from <strong>14.9 to 7.8</strong> in 90 days. AI citations crossed <strong>385</strong> — a 20× increase year over year — and ChatGPT now drives measurable referral traffic to the site.
+      Google Search Console clicks climbed from 5,431 in January to <strong>18,204 in March</strong> (+235%), with impressions up 213% to 5.15M. Average position improved from 14.9 to <strong>7.8</strong> — a 7-position climb on a volume-weighted basis. AI search engines (ChatGPT, Perplexity, Gemini, Copilot, Claude) referred <strong>1,429 additional sessions</strong> in Q1 and are growing month over month.
     </p>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-label">Mar 2026 GSC clicks</div>
+        <div class="hero-stat-label">GSC clicks (Mar)</div>
         <div class="hero-stat-val">18,204</div>
         <div class="hero-stat-sub">+235% vs Jan</div>
       </div>
       <div>
-        <div class="hero-stat-label">Organic keywords</div>
-        <div class="hero-stat-val">5,523</div>
-        <div class="hero-stat-sub">+3,570 YTD (+183%)</div>
+        <div class="hero-stat-label">GSC impressions (Mar)</div>
+        <div class="hero-stat-val">5.15M</div>
+        <div class="hero-stat-sub">+213% vs Jan</div>
       </div>
       <div>
-        <div class="hero-stat-label">AI citations</div>
-        <div class="hero-stat-val">385</div>
-        <div class="hero-stat-sub">+366 YoY (20× growth)</div>
+        <div class="hero-stat-label">Avg position (Mar)</div>
+        <div class="hero-stat-val">7.8</div>
+        <div class="hero-stat-sub">Up from 14.9 in Jan</div>
       </div>
       <div>
-        <div class="hero-stat-label">Domain Rating</div>
-        <div class="hero-stat-val">54</div>
-        <div class="hero-stat-sub">+6 points YoY</div>
+        <div class="hero-stat-label">AI search referrals (Q1)</div>
+        <div class="hero-stat-val">1,429</div>
+        <div class="hero-stat-sub">ChatGPT, Perplexity, Gemini</div>
       </div>
     </div>
   </div>
@@ -362,12 +343,11 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 <nav class="tab-nav">
   <div class="tab-nav-inner">
     <button class="tab-btn active" data-tab="overview">Overview</button>
-    <button class="tab-btn" data-tab="aeo">AEO &amp; AI Citations</button>
-    <button class="tab-btn" data-tab="authority">Authority</button>
     <button class="tab-btn" data-tab="traffic">Traffic Growth</button>
-    <button class="tab-btn" data-tab="keywords">Keywords</button>
-    <button class="tab-btn" data-tab="performance">Performance</button>
-    <button class="tab-btn" data-tab="behavior">User Behavior</button>
+    <button class="tab-btn" data-tab="keywords">Commercial Keywords</button>
+    <button class="tab-btn" data-tab="features">Feature Pages</button>
+    <button class="tab-btn" data-tab="aeo">AEO &amp; AI Search</button>
+    <button class="tab-btn" data-tab="competitive">Competitive</button>
     <button class="tab-btn" data-tab="next">What's Next</button>
   </div>
 </nav>
@@ -379,330 +359,382 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 
   <div class="section">
     <div class="section-head">
-      <div class="section-title"><span class="section-num">★</span> Executive Summary</div>
-      <div class="section-desc">The story in five bullets, in the order a decision-maker should read it.</div>
+      <div class="section-title">Executive Summary</div>
+      <div class="section-desc">What matters, why it matters, what happens next.</div>
     </div>
     <div class="section-body">
       <ol class="summary-bullets">
-        <li><strong>X0PA is accelerating while competitors stall.</strong> Clicks +235%, impressions +213%, organic keywords +183% — all in Q1 2026. Meanwhile SmartRecruiters, Eightfold, and impress.ai shed a combined 6,559 keywords.</li>
-        <li><strong>Bottom-funnel traffic is growing +73%</strong> and converting clicks at nearly 2× the CTR of top-funnel content. The calculators-and-interview-questions strategy is feeding commercial page visibility exactly as designed.</li>
-        <li><strong>Average GSC position moved from 14.9 to 7.8</strong> in 90 days — a meaningful step from page 2 to page 1 on a volume-weighted basis.</li>
-        <li><strong>AEO is driving real sessions.</strong> 385 AI citations (up 20× year over year) are converting into 487 direct ChatGPT referral sessions. Real users, not vanity metrics. This advantage compounds as AI search expands.</li>
-        <li><strong>Lead attribution remains the open gap.</strong> Freshsales shows 348 new contacts in March + 21 deals in Q1, but 99.8% of contacts still land with source = "Unknown" because UTM capture is not yet deployed on the 15 lead-capture forms.</li>
+        <li><strong>Google organic traffic tripled in 90 days.</strong> GSC clicks grew from 5,431 (Jan) to 18,204 (Mar), impressions from 1.64M to 5.15M, and average ranking improved from 14.9 to 7.8 — a meaningful move from page 2 to page 1 across the ranked keyword base.</li>
+        <li><strong>Rankings improved on every commercial keyword that matters.</strong> "AI recruitment software" moved from position 37 to 17. "AI hiring software" from 41 to 14. "AI recruitment" from 72 to 27. "AI screening" from 32 to position 3.6. Four <em>new</em> commercial keywords started ranking in February: AI sourcing, AI hiring platform, AI applicant tracking system, AI in recruiting — all entering at positions 29–48.</li>
+        <li><strong>AI search referrals are validated and growing.</strong> 1,429 sessions Jan–Mar from ChatGPT, Perplexity, Gemini, Copilot, and Claude combined (GA4 source/medium data). ChatGPT alone: 179 → 388 → 483 sessions per month. This surface is compounding as AI search adoption expands.</li>
+        <li><strong>Lead attribution is a known gap right now.</strong> X0PA migrated CRM from HubSpot to Freshsales. During migration, UTM capture was not wired on the 15 lead-capture forms — so 99.8% of new contacts currently land with source = "Unknown." Freshsales does show 348 new contacts in March + 21 deals in Q1 — volume is tracked, organic attribution is not yet. Fixing this is the single highest-leverage next action to close the full funnel loop.</li>
       </ol>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
-      <div class="section-title">Quarter-on-Quarter Growth</div>
-      <div class="section-desc">Calendar-month view, all traffic types. Source: Google Search Console.</div>
+      <div class="section-title">Monthly Growth at a Glance</div>
+      <div class="section-desc">Google Search Console as the canonical source. GA4 shown as a secondary directional comparison.</div>
     </div>
     <div class="section-body">
       <div class="chart-wrap">
-        <div class="chart-title">Monthly GSC Clicks &amp; Impressions (Dec 2025 – Mar 2026)</div>
-        <div class="chart-box"><canvas id="chartMonthly"></canvas></div>
+        <div class="chart-title">Google Search Console — Clicks &amp; Impressions</div>
+        <div class="chart-subtitle">Calendar month view · Jan – Mar 2026</div>
+        <div class="chart-box"><canvas id="chartOrganic"></canvas></div>
       </div>
       <table class="dt">
-        <thead><tr><th>Month</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Avg Position</th><th>Daily clicks</th></tr></thead>
+        <thead><tr><th>Month</th><th>GSC Clicks</th><th>GSC Impressions</th><th>Avg Position</th><th>GA4 Organic Sessions</th></tr></thead>
         <tbody>
-          <tr><td>Dec 2025</td><td>3,941</td><td>1,019,019</td><td>0.39%</td><td>19.3</td><td>127</td></tr>
-          <tr><td>Jan 2026</td><td>5,431</td><td>1,644,057</td><td>0.33%</td><td>14.9</td><td>175</td></tr>
-          <tr><td>Feb 2026</td><td>8,382</td><td>2,276,523</td><td>0.37%</td><td>12.5</td><td>299</td></tr>
-          <tr class="highlight"><td>Mar 2026</td><td>18,204</td><td>5,147,901</td><td>0.35%</td><td>7.8</td><td>587</td></tr>
+          <tr><td>Jan 2026</td><td>5,431</td><td>1,644,057</td><td>14.9</td><td>11,437</td></tr>
+          <tr><td>Feb 2026</td><td>8,382</td><td>2,276,523</td><td>12.5</td><td>20,322</td></tr>
+          <tr class="highlight"><td>Mar 2026</td><td>18,204</td><td>5,147,901</td><td>7.8</td><td>40,533</td></tr>
+          <tr><td>Δ Jan → Mar</td><td class="text-up">+235%</td><td class="text-up">+213%</td><td class="text-up">+7.1 pos</td><td class="text-up">+254%</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
+</div>
+
+<!-- ─────────── Traffic Growth ─────────── -->
+<div class="tab-panel" id="panel-traffic">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Channel Mix Shift — Organic Overtakes Paid</div>
+      <div class="section-desc">GA4 sessions by channel, Jan–Mar 2026. Organic Search went from 12% of total sessions in January to 27% in March, while Paid Search declined from 59% to 19%.</div>
+    </div>
+    <div class="section-body">
+      <div class="chart-wrap">
+        <div class="chart-title">GA4 Sessions by Channel — Monthly</div>
+        <div class="chart-subtitle">Organic Search, Paid Search, Direct, Referral, Display</div>
+        <div class="chart-box"><canvas id="chartChannels"></canvas></div>
+      </div>
+      <table class="dt">
+        <thead><tr><th>Channel</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Δ Jan → Mar</th></tr></thead>
+        <tbody>
+          <tr class="highlight"><td>Organic Search</td><td>11,437</td><td>20,322</td><td>40,533</td><td class="text-up">+254%</td></tr>
+          <tr><td>Paid Search</td><td>56,001</td><td>65,284</td><td>28,478</td><td class="text-down">−49%</td></tr>
+          <tr><td>Direct</td><td>13,416</td><td>17,247</td><td>22,560</td><td class="text-up">+68%</td></tr>
+          <tr><td>Referral</td><td>7,992</td><td>14,639</td><td>21,177</td><td class="text-up">+165%</td></tr>
+          <tr><td>Display</td><td>4,129</td><td>5,730</td><td>20,705</td><td class="text-up">+401%</td></tr>
+          <tr><td><strong>Total sessions</strong></td><td>95,299</td><td>128,359</td><td>147,437</td><td class="text-up">+55%</td></tr>
+        </tbody>
+      </table>
+      <div class="callout info">
+        <strong>Read.</strong> Paid Search spending reduced while Organic Search filled the gap and then some. Organic is now generating 194 key events per month vs. Paid's 73 — organic is producing 2.6× more demo interactions than paid, at zero incremental cost per click.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Google Search Console Trend</div>
+      <div class="section-desc">Clicks and impressions by calendar month. Average position moved from 14.9 in January to 7.8 in March.</div>
+    </div>
+    <div class="section-body">
+      <div class="chart-wrap">
+        <div class="chart-title">Monthly Clicks &amp; Impressions</div>
+        <div class="chart-subtitle">Google Search Console · All search types</div>
+        <div class="chart-box"><canvas id="chartGSC"></canvas></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────── Commercial Keywords ─────────── -->
+<div class="tab-panel" id="panel-keywords">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Commercial Keyword Rankings — Position Gains</div>
+      <div class="section-desc">Google Search Console, Sep 2025 → Apr 2026 trajectory. Excludes branded search.</div>
+    </div>
+    <div class="section-body">
+
+      <h3 class="sh">Money keywords — rankings climbed meaningfully</h3>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai screening</div>
+          <div class="kw-meta">Sep 2025: Pos 32 · Clicks rising · Page 1 now</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-old">32.1</span><span class="kw-arrow">→</span>
+          <span class="kw-pos-new">3.6</span>
+          <span class="kw-delta">+28 pos</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai hiring software</div>
+          <div class="kw-meta">Dec 2025: Pos 41 · Now on page 2, approaching top 10</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-old">41.2</span><span class="kw-arrow">→</span>
+          <span class="kw-pos-new">14.3</span>
+          <span class="kw-delta">+27 pos</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai recruitment</div>
+          <div class="kw-meta">Sep 2025: Pos 72 · Impressions 121 → 1,611 per 28-day window</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-old">72.4</span><span class="kw-arrow">→</span>
+          <span class="kw-pos-new">27.4</span>
+          <span class="kw-delta">+45 pos</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai recruitment software</div>
+          <div class="kw-meta">Sep 2025: Pos 37 · 20-position climb across 6 months</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-old">37.7</span><span class="kw-arrow">→</span>
+          <span class="kw-pos-new">17.2</span>
+          <span class="kw-delta">+20 pos</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai recruiter</div>
+          <div class="kw-meta">Steady top 5 · The anchor commercial keyword</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-old">8.0</span><span class="kw-arrow">→</span>
+          <span class="kw-pos-new">5.4</span>
+          <span class="kw-delta">+2.6 pos</span>
+        </div>
+      </div>
+
+      <h3 class="sh">New commercial keywords — first appearances in February 2026</h3>
+      <p class="text-muted" style="font-size:13px;margin-bottom:12px">
+        These queries had zero impressions in January. They started ranking in February or March, matching content ship dates. Current positions are entry-level but trending upward.
+      </p>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai sourcing</div>
+          <div class="kw-meta">First seen Feb 2026 · Pos 48 → 30 (March)</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-new">29.8</span>
+          <span class="kw-new">New · Feb 2026</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai hiring platform</div>
+          <div class="kw-meta">First seen Feb 2026 · Pos 29.1 → 27.9</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-new">27.9</span>
+          <span class="kw-new">New · Feb 2026</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai applicant tracking system</div>
+          <div class="kw-meta">First seen Feb 2026 · Pos 31.9 → 33.9</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-new">33.9</span>
+          <span class="kw-new">New · Feb 2026</span>
+        </div>
+      </div>
+
+      <div class="kw-card">
+        <div class="kw-card-left">
+          <div class="kw-name">ai in recruiting</div>
+          <div class="kw-meta">First seen Feb 2026 · Pos 40.9 → 36.1</div>
+        </div>
+        <div class="kw-card-right">
+          <span class="kw-pos-new">36.1</span>
+          <span class="kw-new">New · Feb 2026</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Why this section matters.</strong> Brand search ("x0pa ai", "xopa ai") is saturated and ranking 1–3 — no more headroom there. The growth surface is the commercial keyword cluster: AI recruitment software (17), AI hiring software (14), AI recruiter (5). Pushing any of these into position 1–3 adds meaningful high-intent traffic directly correlated with demo request volume.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─────────── Feature Pages ─────────── -->
+<div class="tab-panel" id="panel-features">
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Feature Pages — Launch Status</div>
+      <div class="section-desc">Two new feature pages went live under /features/ during Q1. Current status: live on site (HTTP 200), but not yet appearing in Google Search Console data — the typical indexing + ranking lag for new pages is 2–6 weeks.</div>
+    </div>
+    <div class="section-body">
+
+      <table class="dt">
+        <thead><tr><th>URL</th><th>HTTP status</th><th>GSC impressions</th><th>GSC clicks</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>/features/job-posting/</td>
+            <td><span class="pill success">200 OK</span></td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="pill accent">Indexing phase</span></td>
+          </tr>
+          <tr>
+            <td>/features/recruitment-dashboard/</td>
+            <td><span class="pill success">200 OK</span></td>
+            <td>0</td>
+            <td>0</td>
+            <td><span class="pill accent">Indexing phase</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout warn">
+        <strong>Recommended April actions to accelerate indexing:</strong>
+        <ul style="margin-top:8px;padding-left:20px">
+          <li>Submit both URLs via GSC URL Inspection → Request Indexing</li>
+          <li>Confirm both pages are present in <code>sitemap.xml</code></li>
+          <li>Add internal links from <code>/ai-recruiter/</code>, <code>/ai-recruitment/</code>, and homepage to pass authority</li>
+          <li>Target specific commercial keywords per page (e.g., /features/job-posting/ → "ai job posting," /features/recruitment-dashboard/ → "ai recruitment dashboard")</li>
+        </ul>
+      </div>
+
+      <div class="callout info">
+        <strong>Expected in the May report:</strong> Both pages should be in GSC data by early May with initial impression volume and position data. We'll compare launch-to-first-click timing and establish a baseline for future feature page rollouts.
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ─────────── AEO ─────────── -->
 <div class="tab-panel" id="panel-aeo">
   <div class="section">
     <div class="section-head">
-      <div class="section-title"><span class="section-num">1</span> AEO — Citation Volume Grew 20× YoY</div>
-      <div class="section-desc">X0PA is now cited across all five major AI platforms. One year ago, citations were effectively limited to Google AI Overviews.</div>
-    </div>
-    <div class="section-body">
-      <div class="chart-grid">
-        <div class="chart-wrap">
-          <div class="chart-title">AI Citations by Platform (Apr 2026)</div>
-          <div class="chart-box"><canvas id="chartAEO"></canvas></div>
-        </div>
-        <div class="chart-wrap">
-          <div class="chart-title">Total Citations: YoY Growth</div>
-          <div class="chart-box"><canvas id="chartAEOYoY"></canvas></div>
-        </div>
-      </div>
-
-      <table class="dt">
-        <thead><tr><th>Platform</th><th>Citations</th><th>Pages cited</th><th>YoY change</th></tr></thead>
-        <tbody>
-          <tr><td>Google AI Overview</td><td>311</td><td>89</td><td class="text-up">+292</td></tr>
-          <tr><td>ChatGPT</td><td>47</td><td>34</td><td class="text-up">+47</td></tr>
-          <tr><td>Gemini</td><td>17</td><td>11</td><td class="text-up">+17</td></tr>
-          <tr><td>Perplexity</td><td>5</td><td>4</td><td class="text-up">+5</td></tr>
-          <tr><td>Copilot</td><td>5</td><td>3</td><td class="text-up">+5</td></tr>
-          <tr class="highlight"><td>Total</td><td>385</td><td>141</td><td class="text-up">+366</td></tr>
-        </tbody>
-      </table>
-
-      <div class="callout">
-        <strong>Why this matters.</strong> Google AI Overviews rolled out to the majority of US/EU English queries in March 2026. Being cited in 311 AIO responses across 89 pages is the single highest-leverage visibility moat in search right now. ChatGPT citations (47, up from 0) and Gemini citations (17, up from 0) are net-new surfaces — every query there is incremental discovery.
-      </div>
-
-      <div class="callout success">
-        <strong>AEO is driving measurable traffic, not just impressions.</strong> Microsoft Clarity recorded 487 direct chatgpt.com referral sessions between Jan 1 and Apr 17 — real users clicking through from ChatGPT conversations to x0pa.com. ChatGPT is now tracking above Yahoo as a referral source.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ─────────── Authority ─────────── -->
-<div class="tab-panel" id="panel-authority">
-  <div class="section">
-    <div class="section-head">
-      <div class="section-title"><span class="section-num">2</span> Domain Rating &amp; Competitive Authority</div>
-      <div class="section-desc">X0PA is the only player with meaningful keyword expansion this quarter.</div>
+      <div class="section-title">AI Search Referrals — Validated via GA4</div>
+      <div class="section-desc">Real users arriving on x0pa.com from AI search engines. All numbers from GA4 source/medium — same definition Nina's team uses internally.</div>
     </div>
     <div class="section-body">
 
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="kpi-label">Domain Rating</div>
-          <div class="kpi-val">54</div>
-          <div class="kpi-delta up">+6 YoY</div>
+          <div class="kpi-label">Total AI referrals Q1</div>
+          <div class="kpi-val">1,429</div>
+          <div class="kpi-delta up">Jan–Mar 2026</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">Backlinks</div>
-          <div class="kpi-val">5.4K</div>
-          <div class="kpi-delta up">+3.1K YoY</div>
+          <div class="kpi-label">ChatGPT sessions</div>
+          <div class="kpi-val">1,050</div>
+          <div class="kpi-delta up">+170% Jan → Mar</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">Ref. domains</div>
-          <div class="kpi-val">1,026</div>
-          <div class="kpi-delta up">+606 YoY</div>
+          <div class="kpi-label">Perplexity sessions</div>
+          <div class="kpi-val">182</div>
+          <div class="kpi-delta up">Monthly</div>
         </div>
         <div class="kpi">
-          <div class="kpi-label">Organic KW (YTD)</div>
-          <div class="kpi-val">5,523</div>
-          <div class="kpi-delta up">+183%</div>
+          <div class="kpi-label">Gemini + Copilot + Claude</div>
+          <div class="kpi-val">197</div>
+          <div class="kpi-delta up">Combined</div>
         </div>
       </div>
 
       <div class="chart-wrap">
-        <div class="chart-title">Organic Keywords — X0PA vs Competitors (Jan 1 → Apr 17, 2026)</div>
-        <div class="chart-box"><canvas id="chartCompKW"></canvas></div>
+        <div class="chart-title">AI Search Referrals by Platform — Monthly</div>
+        <div class="chart-subtitle">GA4 · source/medium data · Jan – Mar 2026</div>
+        <div class="chart-box"><canvas id="chartAEO"></canvas></div>
       </div>
 
       <table class="dt">
-        <thead><tr><th>Metric</th><th>X0PA AI</th><th>impress.ai</th><th>Eightfold AI</th><th>SmartRecruiters</th></tr></thead>
+        <thead><tr><th>Platform</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Q1 total</th><th>Δ Jan → Mar</th></tr></thead>
         <tbody>
-          <tr><td>Domain Rating</td><td>54</td><td>53 (-4)</td><td>78 (-1)</td><td>87</td></tr>
-          <tr><td>Backlinks</td><td>5,394 (+594)</td><td>3,216</td><td>1.8M</td><td>40.4M</td></tr>
-          <tr><td>Referring domains</td><td>1,026 (+44)</td><td>703</td><td>10,210</td><td>25,245</td></tr>
-          <tr class="highlight"><td>Organic keywords</td><td>5,523 (+3,570)</td><td>58 (-49)</td><td>3,419 (-2,753)</td><td>20,233 (-3,757)</td></tr>
-          <tr class="highlight"><td>Organic traffic</td><td>28,078 (+20,135)</td><td>476 (-12)</td><td>32,801 (+4,483)</td><td>150,659 (+1,747)</td></tr>
-          <tr><td>Site status</td><td><span class="pill success">Accelerating</span></td><td><span class="pill accent">Bleeding</span></td><td><span class="pill accent">Contracting</span></td><td><span class="pill brand">Plateaued</span></td></tr>
+          <tr class="highlight"><td>chatgpt.com</td><td>179</td><td>388</td><td>483</td><td>1,050</td><td class="text-up">+170%</td></tr>
+          <tr><td>perplexity.ai</td><td>55</td><td>62</td><td>65</td><td>182</td><td class="text-up">+18%</td></tr>
+          <tr><td>gemini.google.com</td><td>15</td><td>29</td><td>35</td><td>79</td><td class="text-up">+133%</td></tr>
+          <tr><td>copilot.microsoft.com + copilot.com</td><td>40</td><td>27</td><td>17</td><td>84</td><td class="text-down">−58%</td></tr>
+          <tr><td>claude.ai</td><td>1</td><td>12</td><td>21</td><td>34</td><td class="text-up">+2,000%</td></tr>
+          <tr><td><strong>Total AI referrals</strong></td><td>290</td><td>518</td><td>621</td><td><strong>1,429</strong></td><td class="text-up">+114%</td></tr>
         </tbody>
       </table>
 
-      <div class="callout">
-        DR is 54 — up <strong>+6 points year-over-year</strong> (48 → 54). Backlink velocity reflects in DR with a 3–6 month lag; we added +594 links and +44 referring domains in Q1 2026 alone, which will flow through to DR in the May/June snapshot. Year-over-year: <strong>+3,100 backlinks</strong> and <strong>+606 referring domains</strong> — a near-tripling of the link profile.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ─────────── Traffic ─────────── -->
-<div class="tab-panel" id="panel-traffic">
-  <div class="section">
-    <div class="section-head">
-      <div class="section-title"><span class="section-num">3</span> Bottom Funnel Traffic — Accelerating</div>
-      <div class="section-desc">Service &amp; product pages only: homepage, AI recruiter, ATS, RPO, academia, talent-acquisition, pricing. Excludes calculators, glossary, blog, interview-questions, and hiring guides.</div>
-    </div>
-    <div class="section-body">
-      <div class="chart-wrap">
-        <div class="chart-title">Bottom Funnel Monthly Clicks (Jan → Mar 2026, rolling 28-day windows)</div>
-        <div class="chart-box"><canvas id="chartBF"></canvas></div>
-      </div>
-
-      <table class="dt">
-        <thead><tr><th>Period</th><th>Clicks</th><th>Impressions</th><th>Daily avg</th></tr></thead>
-        <tbody>
-          <tr><td>Jan 2026 (28-day)</td><td>554</td><td>80,529</td><td>20</td></tr>
-          <tr><td>Feb 2026 (28-day)</td><td>797</td><td>131,077</td><td>28</td></tr>
-          <tr class="highlight"><td>Mar 2026 (28-day)</td><td>956</td><td>152,844</td><td>34</td></tr>
-        </tbody>
-      </table>
-
-      <div class="callout">
-        <strong>Bottom-funnel clicks grew +73% and impressions +90% from January to March.</strong> The trajectory is steepening — the March-to-April rolling window shows 940 bottom-funnel clicks on ~146K impressions, continuing the acceleration.
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-head">
-      <div class="section-title">Bottom Funnel vs Top Funnel</div>
-      <div class="section-desc">Jan → March totals, both funnel types side by side.</div>
-    </div>
-    <div class="section-body">
-      <div class="vs-grid">
-        <div class="vs-card">
-          <div class="vs-head">Bottom Funnel · Service &amp; Product</div>
-          <div class="vs-row"><span>Pages tracked</span><strong>160</strong></div>
-          <div class="vs-row"><span>Clicks</span><strong>2,307</strong></div>
-          <div class="vs-row"><span>Impressions</span><strong>364,450</strong></div>
-          <div class="vs-row"><span>CTR</span><strong class="text-up">0.63%</strong></div>
-        </div>
-        <div class="vs-card">
-          <div class="vs-head">Top Funnel · Calculators / Glossary / Hiring / Blog</div>
-          <div class="vs-row"><span>Pages tracked</span><strong>1,778</strong></div>
-          <div class="vs-row"><span>Clicks</span><strong>29,710</strong></div>
-          <div class="vs-row"><span>Impressions</span><strong>8.68M</strong></div>
-          <div class="vs-row"><span>CTR</span><strong>0.34%</strong></div>
-        </div>
-      </div>
       <div class="callout success">
-        <strong>Bottom-funnel CTR is 1.8× higher than top-funnel CTR.</strong> When users reach commercial pages, they convert to clicks at nearly twice the rate. This confirms the calculator and interview-questions content is doing its job (pulling traffic at volume) while commercial pages are well-targeted (converting that traffic at the right rate).
+        <strong>This is real traffic, not a vanity metric.</strong> Every one of these 1,429 sessions is a human who asked an AI system a question about hiring, ATS, AI recruitment, or interview automation, saw x0pa.com cited in the response, and clicked through. This surface is growing MoM and compounding as AI search adoption expands across Nina's buyer audience.
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- ─────────── Keywords ─────────── -->
-<div class="tab-panel" id="panel-keywords">
-  <div class="section">
-    <div class="section-head">
-      <div class="section-title"><span class="section-num">4</span> Bottom Funnel Keywords — What We Rank For</div>
-      <div class="section-desc">Bottom-funnel pages only (excludes calculator / glossary / hiring / blog URLs). Jan – Mar 2026.</div>
-    </div>
-    <div class="section-body">
-      <table class="dt">
-        <thead><tr><th>Keyword</th><th>Type</th><th>Clicks</th><th>Impressions</th><th>CTR</th><th>Position</th></tr></thead>
-        <tbody>
-          <tr><td>xopa ai</td><td><span class="pill brand">Brand</span></td><td>258</td><td>2,897</td><td>8.9%</td><td>1.2</td></tr>
-          <tr><td>x0pa ai</td><td><span class="pill brand">Brand</span></td><td>208</td><td>1,983</td><td>10.5%</td><td>1.3</td></tr>
-          <tr><td>xopa</td><td><span class="pill brand">Brand</span></td><td>159</td><td>4,391</td><td>3.6%</td><td>2.3</td></tr>
-          <tr><td>x0pa</td><td><span class="pill brand">Brand</span></td><td>119</td><td>1,629</td><td>7.3%</td><td>2.6</td></tr>
-          <tr><td>ai recruiter</td><td><span class="pill accent">Commercial</span></td><td>56</td><td>4,055</td><td>1.4%</td><td>34.2</td></tr>
-          <tr><td>ai recruitment software</td><td><span class="pill accent">Commercial</span></td><td>8</td><td>3,870</td><td>0.2%</td><td>58.1</td></tr>
-          <tr><td>ai recruitment platform</td><td><span class="pill accent">Commercial</span></td><td>4</td><td>1,223</td><td>0.3%</td><td>57.5</td></tr>
-          <tr><td>ai hiring software</td><td><span class="pill accent">Commercial</span></td><td>—</td><td>1,934</td><td>—</td><td>53.4</td></tr>
-          <tr><td>ai talent acquisition software</td><td><span class="pill accent">Commercial</span></td><td>—</td><td>1,223</td><td>—</td><td>49.5</td></tr>
-          <tr><td>ai recruiting software</td><td><span class="pill accent">Commercial</span></td><td>—</td><td>712</td><td>—</td><td>32.8</td></tr>
-          <tr><td>ai hiring platform</td><td><span class="pill accent">Commercial</span></td><td>—</td><td>728</td><td>—</td><td>43.7</td></tr>
-          <tr><td>ai sourcing</td><td><span class="pill accent">Commercial</span></td><td>—</td><td>641</td><td>—</td><td>39.7</td></tr>
-        </tbody>
-      </table>
-
-      <div class="callout warn">
-        <strong>Single highest-leverage April–May opportunity:</strong> The commercial keyword cluster (AI recruitment software, AI hiring platform, AI talent acquisition) sits in positions 30–60 with combined impressions of 15,000+ per month. Pushing any one into page 1 adds 200–500 clicks per month from high-intent commercial searchers. Brand search is already saturated; commercial is the growth surface.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ─────────── Performance ─────────── -->
-<div class="tab-panel" id="panel-performance">
-  <div class="section">
-    <div class="section-head">
-      <div class="section-title"><span class="section-num">5</span> Website Performance — Lab vs. Real-User Data</div>
-      <div class="section-desc">Two measurement sources: Google Lighthouse (lab test, controlled conditions) and Microsoft Clarity (real users, actual devices and networks). Google ranking uses real-user field data.</div>
-    </div>
-    <div class="section-body">
-
-      <h3 style="font-size:14px;font-weight:700;color:var(--ink);margin:8px 0 12px">Lighthouse — Homepage Competitive Benchmark</h3>
-      <table class="dt">
-        <thead><tr><th>Site</th><th>Performance</th><th>SEO Score</th><th>Accessibility</th><th>LCP</th><th>CLS</th></tr></thead>
-        <tbody>
-          <tr class="highlight"><td>x0pa.com</td><td>87</td><td>100</td><td>91</td><td>1.95s</td><td>0.006</td></tr>
-          <tr><td>smartrecruiters.com</td><td>32</td><td>85</td><td>82</td><td>4.59s</td><td>0.259</td></tr>
-          <tr><td>eightfold.ai</td><td>85</td><td>85</td><td>80</td><td>1.20s</td><td>0.11</td></tr>
-          <tr><td>impress.ai</td><td>55</td><td>83</td><td>73</td><td>7.92s</td><td>0.061</td></tr>
-        </tbody>
-      </table>
-
-      <h3 style="font-size:14px;font-weight:700;color:var(--ink);margin:24px 0 12px">Microsoft Clarity — Real User Field Data (104,893 sessions)</h3>
-      <table class="dt">
-        <thead><tr><th>Metric</th><th>X0PA real-user value</th><th>Google "Good" threshold</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>Performance Score</td><td>78.9</td><td>—</td><td><span class="pill success">Healthy</span></td></tr>
-          <tr><td>LCP (Largest Contentful Paint)</td><td>3.24s</td><td>≤ 2.5s</td><td><span class="pill accent">Needs improvement</span></td></tr>
-          <tr><td>INP (Interaction to Next Paint)</td><td>288ms</td><td>≤ 200ms</td><td><span class="pill accent">Needs improvement</span></td></tr>
-          <tr><td>CLS (Cumulative Layout Shift)</td><td>0.014</td><td>≤ 0.1</td><td><span class="pill success">Passing (excellent)</span></td></tr>
-        </tbody>
-      </table>
 
       <div class="callout">
-        <strong>Honest read.</strong> Lighthouse lab tests run on throttled desktop Chrome with no noise. Clarity measures 104,893 real (non-bot) sessions — including mobile users on 3G networks and older devices. Google uses the real-user field data for ranking. LCP and INP both sit in the "needs improvement" band with real users, even though lab scores are strong. <strong>These are the two April–May priorities</strong> — any LCP or INP work on the homepage and calculator templates flows directly into Core Web Vitals ranking signal.
+        <strong>Ahrefs citation surface.</strong> Per the latest Ahrefs Brand Radar snapshot (17 April 2026), x0pa.com is cited in <strong>311 Google AI Overview responses</strong> across 89 pages, <strong>47 ChatGPT citations</strong> across 34 pages, plus Gemini (17), Perplexity (5), and Copilot (5). The GA4 traffic above is what those citations are converting to in real user behavior.
       </div>
     </div>
   </div>
 </div>
 
-<!-- ─────────── Behavior ─────────── -->
-<div class="tab-panel" id="panel-behavior">
+<!-- ─────────── Competitive ─────────── -->
+<div class="tab-panel" id="panel-competitive">
   <div class="section">
     <div class="section-head">
-      <div class="section-title"><span class="section-num">6</span> User Behavior — Microsoft Clarity</div>
-      <div class="section-desc">128,282 total sessions · 104,893 after bot filtering · Jan 1 – Apr 17, 2026.</div>
+      <div class="section-title">Competitive Trajectory — Ahrefs Monthly Data</div>
+      <div class="section-desc">Organic traffic and organic keyword counts for X0PA + three primary competitors, measured from Ahrefs on the 1st of each month.</div>
     </div>
     <div class="section-body">
-
-      <div class="kpi-grid">
-        <div class="kpi">
-          <div class="kpi-label">Human sessions</div>
-          <div class="kpi-val">104,893</div>
-          <div class="kpi-delta flat">18.2% bots filtered</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Unique users</div>
-          <div class="kpi-val">108,536</div>
-          <div class="kpi-delta flat">Jan – Apr 17</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Mobile traffic</div>
-          <div class="kpi-val">63%</div>
-          <div class="kpi-delta flat">Chrome + Safari mobile</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Active time / session</div>
-          <div class="kpi-val">92s</div>
-          <div class="kpi-delta flat">Total: 207s</div>
-        </div>
-      </div>
 
       <div class="chart-grid">
         <div class="chart-wrap">
-          <div class="chart-title">Top Referral Sources (sessions)</div>
-          <div class="chart-box"><canvas id="chartRef"></canvas></div>
+          <div class="chart-title">Organic Traffic — Monthly Trend</div>
+          <div class="chart-subtitle">Ahrefs est. monthly organic visits</div>
+          <div class="chart-box"><canvas id="chartCompTraffic"></canvas></div>
         </div>
         <div class="chart-wrap">
-          <div class="chart-title">Device Mix</div>
-          <div class="chart-box"><canvas id="chartDevice"></canvas></div>
+          <div class="chart-title">Organic Keyword Count — Monthly Trend</div>
+          <div class="chart-subtitle">Total keywords ranking top 100</div>
+          <div class="chart-box"><canvas id="chartCompKW"></canvas></div>
         </div>
       </div>
 
-      <h3 style="font-size:14px;font-weight:700;color:var(--ink);margin:16px 0 12px">UX Optimization Opportunities Identified by Clarity</h3>
+      <h3 class="sh">Organic Traffic — Jan 1 → Apr 1 (Ahrefs)</h3>
       <table class="dt">
-        <thead><tr><th>Signal</th><th>Sessions</th><th>% of total</th><th>What it suggests</th></tr></thead>
+        <thead><tr><th>Site</th><th>Jan 1</th><th>Feb 1</th><th>Mar 1</th><th>Apr 1</th><th>Δ Jan → Apr</th></tr></thead>
         <tbody>
-          <tr><td>Dead clicks</td><td>16,910</td><td>13.18%</td><td>Non-clickable elements look interactive — major UX cleanup win</td></tr>
-          <tr><td>Quick back clicks</td><td>3,966</td><td>3.09%</td><td>Bouncing within seconds of landing — title / LCP mismatch</td></tr>
-          <tr><td>Rage clicks</td><td>1,348</td><td>1.05%</td><td>Slow or unresponsive buttons — correlates with INP 288ms</td></tr>
+          <tr class="highlight"><td>x0pa.com</td><td>8,649</td><td>9,039</td><td>17,185</td><td>30,385</td><td class="text-up">+251%</td></tr>
+          <tr><td>smartrecruiters.com</td><td>154,273</td><td>161,296</td><td>156,184</td><td>147,586</td><td class="text-down">−4%</td></tr>
+          <tr><td>eightfold.ai</td><td>30,219</td><td>32,744</td><td>33,814</td><td>31,988</td><td>+6%</td></tr>
+          <tr><td>impress.ai</td><td>487</td><td>499</td><td>557</td><td>492</td><td>+1%</td></tr>
         </tbody>
       </table>
 
-      <div class="callout warn">
-        <strong>13.18% dead-click rate is fixable.</strong> This ties back to the INP 288ms finding: slow interactions make users click repeatedly on elements that are already responding (just slowly), which Clarity registers as "dead clicks." Fixing INP addresses both metrics simultaneously.
+      <h3 class="sh">Organic Keyword Count — Jan 1 → Apr 1 (Ahrefs)</h3>
+      <table class="dt">
+        <thead><tr><th>Site</th><th>Jan 1</th><th>Feb 1</th><th>Mar 1</th><th>Apr 1</th><th>Δ Jan → Apr</th></tr></thead>
+        <tbody>
+          <tr class="highlight"><td>x0pa.com</td><td>2,497</td><td>3,073</td><td>5,639</td><td>6,462</td><td class="text-up">+159%</td></tr>
+          <tr><td>smartrecruiters.com</td><td>34,995</td><td>48,722</td><td>46,552</td><td>29,469</td><td class="text-down">−16%</td></tr>
+          <tr><td>eightfold.ai</td><td>7,427</td><td>7,418</td><td>6,701</td><td>4,944</td><td class="text-down">−33%</td></tr>
+          <tr><td>impress.ai</td><td>124</td><td>100</td><td>88</td><td>74</td><td class="text-down">−40%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>Honest read.</strong> Competitors held their organic traffic roughly flat while losing long-tail keyword coverage (−16% to −40%). This indicates their core money pages still work but their breadth is contracting. X0PA grew on both dimensions simultaneously — keywords +159%, traffic +251% — which is the clean indicator of genuine topic authority expansion rather than a single page spike.
       </div>
 
-      <p class="text-muted" style="font-size:12px;margin-top:14px">
-        Clarity also logs form-interaction events (13,605) and "book" clicks (1,011), but these fire on any form submission — contact forms, calculator inputs, newsletter signups, filters — so they are engagement signals, not validated leads. Verified lead volume is tracked in Freshsales: 348 new contacts in March and 21 deals opened in Q1 2026.
-      </p>
+      <h3 class="sh">X0PA Referring Domains — Monthly</h3>
+      <table class="dt">
+        <thead><tr><th>Date</th><th>Referring domains</th><th>Net new</th></tr></thead>
+        <tbody>
+          <tr><td>Jan 1, 2026</td><td>986</td><td>—</td></tr>
+          <tr><td>Feb 1, 2026</td><td>995</td><td class="text-up">+9</td></tr>
+          <tr><td>Mar 1, 2026</td><td>1,013</td><td class="text-up">+18</td></tr>
+          <tr><td>Apr 1, 2026</td><td>1,033</td><td class="text-up">+20</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -711,20 +743,20 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 <div class="tab-panel" id="panel-next">
   <div class="section">
     <div class="section-head">
-      <div class="section-title"><span class="section-num">→</span> Priorities for April &amp; May</div>
-      <div class="section-desc">Four actions ordered by expected impact.</div>
+      <div class="section-title">What We're Doing in April &amp; May</div>
+      <div class="section-desc">Four priorities, ordered by expected business impact.</div>
     </div>
     <div class="section-body">
 
       <ol class="summary-bullets">
-        <li><strong>Core Web Vitals field data.</strong> LCP 3.24s and INP 288ms both need reduction. Focus on the homepage and calculator templates — these drive ~70% of all sessions. Target: LCP ≤ 2.5s, INP ≤ 200ms within 60 days.</li>
-        <li><strong>Commercial keyword push.</strong> "ai recruitment software," "ai hiring platform," "ai talent acquisition" sit at positions 30–60 with 15,000+ combined monthly impressions. Pushing one or two into page 1 adds material commercial traffic directly correlated with demo requests.</li>
-        <li><strong>UX cleanup from Clarity.</strong> 13.18% dead-click rate is fixable. Audit the dead-click heatmaps and resolve the top 5 offenders. Also addresses rage-click pattern.</li>
-        <li><strong>UTM capture deployment.</strong> Unblocks full organic-to-lead attribution for the May report. Single highest-leverage engineering change to close the organic → contact → deal loop.</li>
+        <li><strong>Commercial keyword push.</strong> "AI recruitment software" (pos 17), "AI hiring software" (pos 14), "AI recruiter" (pos 5) are within striking distance of page 1 / top 3. On-page optimization + internal linking campaign across these three pages. Target: one keyword into top 3 by end of May.</li>
+        <li><strong>Feature pages expansion.</strong> /features/job-posting/ and /features/recruitment-dashboard/ launched but not yet indexed with search presence. April work: submit for indexing, add internal linking, optimize for target commercial keywords. Additional feature pages in planning — candidate templates: /features/candidate-screening/, /features/ai-interview/, /features/candidate-matching/.</li>
+        <li><strong>Attribution fix (HubSpot → Freshsales migration).</strong> The CRM migration is complete, but UTM capture was not carried over — 99.8% of Freshsales contacts currently have source = "Unknown." Engineering dependency: deploy UTM parameter capture on the 15 lead-capture forms and map to <code>cf_traffic_source</code> in Freshsales. Once shipped, we close the full loop and the May report includes <em>organic-attributed</em> leads and deals for the first time.</li>
+        <li><strong>Bottom funnel deepening.</strong> Dedicated work to strengthen commercial pages: schema enhancement on /ai-recruiter/ and /ai-recruitment/, conversion-focused copy tests, improved internal linking from calculator and glossary pages to feature/product pages.</li>
       </ol>
 
-      <div class="callout">
-        <strong>What changes in the May report.</strong> With UTM capture deployed, we'll be able to report organic-attributed contacts and organic-attributed deal volume for the first time — turning the current "traffic and rankings" narrative into a full funnel measurement from impression to revenue.
+      <div class="callout info">
+        <strong>What changes in the May report.</strong> With UTM capture deployed and feature pages indexed, we'll report: (1) organic-attributed contact and deal volume from Freshsales, (2) first-click and first-impression data for the new feature pages, (3) movement on commercial keyword rankings, and (4) continued Q2 trend on AI search referrals.
       </div>
     </div>
   </div>
@@ -735,7 +767,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
     </div>
     <div class="section-body">
       <p class="text-muted" style="font-size:13px;line-height:1.7">
-        Google Search Console (Dec 2025 – Mar 2026 calendar months + rolling 28-day pages) · Ahrefs Site Explorer (Jan 1 → Apr 17 snapshots, 2-year history, AI citation counts) · Microsoft Clarity (Jan 1 – Apr 17, 2026 · 128,282 sessions) · Google Lighthouse via DataForSEO · Freshsales CRM (read-only).
+        Google Analytics 4 (session, channel, source/medium, key events) · Google Search Console (clicks, impressions, position, monthly calendar view) · Ahrefs Site Explorer (organic traffic, keyword count, referring domains — monthly snapshots on day 1 of each month) · Ahrefs Brand Radar (AI citation counts as of 17 April 2026) · Freshsales CRM (contact and deal volume, read-only). All numbers in this report can be re-derived from these sources.
       </p>
     </div>
   </div>
@@ -752,7 +784,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 32px 24px 80px; }
 
 <script>
 // ─── Password gate ───
-const PW_HASH = '7f26104f77a7ce477546cd1ea99b6c99b5eb079e3ec9238583314eccea00440a'; // sha256 of "reports"
+const PW_HASH = '7f26104f77a7ce477546cd1ea99b6c99b5eb079e3ec9238583314eccea00440a';
 async function sha256(str){
   const buf = new TextEncoder().encode(str);
   const hash = await crypto.subtle.digest('SHA-256', buf);
@@ -783,7 +815,7 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
-    window.scrollTo({top: document.querySelector('.tab-nav').offsetTop - 60, behavior: 'smooth'});
+    window.scrollTo({top: document.querySelector('.tab-nav').offsetTop - 68, behavior: 'smooth'});
   });
 });
 
@@ -795,107 +827,146 @@ function initCharts(){
 
   const BRAND = '#163B8D';
   const BRAND_LIGHT = '#6a8bd8';
+  const BRAND_FAINT = '#bcd1ff';
   const ACCENT = '#F59E0B';
   const SUCCESS = '#059669';
+  const DANGER = '#ef4444';
   const GREY = '#cbd5e1';
-  const INK_LIGHT = '#64748b';
 
   Chart.defaults.font.family = "Inter, sans-serif";
   Chart.defaults.font.size = 11;
-  Chart.defaults.color = INK_LIGHT;
+  Chart.defaults.color = '#64748b';
   Chart.defaults.plugins.legend.position = 'bottom';
   Chart.defaults.plugins.legend.labels.usePointStyle = true;
   Chart.defaults.plugins.legend.labels.padding = 14;
 
-  // Monthly clicks + impressions
-  new Chart(document.getElementById('chartMonthly'), {
+  const months = ['Jan 2026', 'Feb 2026', 'Mar 2026'];
+  const monthsQ = ['Jan', 'Feb', 'Mar', 'Apr'];
+
+  // Overview: GSC clicks + impressions (dual axis bar)
+  new Chart(document.getElementById('chartOrganic'), {
     type: 'bar',
     data: {
-      labels: ['Dec 2025','Jan 2026','Feb 2026','Mar 2026'],
+      labels: months,
       datasets: [
-        { label: 'Clicks', data: [3941, 5431, 8382, 18204], backgroundColor: BRAND, yAxisID: 'y', borderRadius: 4 },
-        { label: 'Impressions (÷100)', data: [10190, 16441, 22765, 51479], backgroundColor: BRAND_LIGHT, yAxisID: 'y', borderRadius: 4 },
+        { label: 'GSC clicks', data: [5431, 8382, 18204], backgroundColor: BRAND, borderRadius: 5, yAxisID: 'y' },
+        { label: 'GSC impressions', data: [1644057, 2276523, 5147901], backgroundColor: BRAND_FAINT, borderRadius: 5, yAxisID: 'y1' },
       ]
     },
     options: {
       maintainAspectRatio: false,
-      scales: { y: { beginAtZero: true, grid: { color: '#f1f4fa' } }, x: { grid: { display: false } } }
+      scales: {
+        y: { type: 'linear', position: 'left', beginAtZero: true, title: { display: true, text: 'Clicks' }, grid: { color: '#f1f4fa' } },
+        y1: { type: 'linear', position: 'right', beginAtZero: true, title: { display: true, text: 'Impressions' }, grid: { display: false } },
+        x: { grid: { display: false } }
+      }
     }
   });
 
-  // AEO platform breakdown
-  new Chart(document.getElementById('chartAEO'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Google AI Overview (311)','ChatGPT (47)','Gemini (17)','Copilot (5)','Perplexity (5)'],
-      datasets: [{ data: [311, 47, 17, 5, 5], backgroundColor: [BRAND, ACCENT, '#8b5cf6', '#0ea5e9', '#10b981'], borderWidth: 0 }]
-    },
-    options: { maintainAspectRatio: false, cutout: '60%' }
-  });
-
-  // AEO YoY
-  new Chart(document.getElementById('chartAEOYoY'), {
+  // Channel mix stacked
+  new Chart(document.getElementById('chartChannels'), {
     type: 'bar',
     data: {
-      labels: ['Apr 2025', 'Apr 2026'],
-      datasets: [{ label: 'Total AI citations', data: [19, 385], backgroundColor: [GREY, BRAND], borderRadius: 6 }]
-    },
-    options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, grid: { color: '#f1f4fa' } }, x: { grid: { display: false } } } }
-  });
-
-  // Competitive keyword delta
-  new Chart(document.getElementById('chartCompKW'), {
-    type: 'bar',
-    data: {
-      labels: ['X0PA AI','SmartRecruiters','Eightfold AI','impress.ai'],
-      datasets: [{
-        label: 'Δ organic keywords (Jan 1 → Apr 17)',
-        data: [3570, -3757, -2753, -49],
-        backgroundColor: ctx => ctx.raw >= 0 ? SUCCESS : '#ef4444',
-        borderRadius: 4
-      }]
+      labels: months,
+      datasets: [
+        { label: 'Organic Search', data: [11437, 20322, 40533], backgroundColor: BRAND, borderRadius: 3 },
+        { label: 'Paid Search', data: [56001, 65284, 28478], backgroundColor: ACCENT, borderRadius: 3 },
+        { label: 'Direct', data: [13416, 17247, 22560], backgroundColor: BRAND_LIGHT, borderRadius: 3 },
+        { label: 'Referral', data: [7992, 14639, 21177], backgroundColor: SUCCESS, borderRadius: 3 },
+        { label: 'Display', data: [4129, 5730, 20705], backgroundColor: '#8b5cf6', borderRadius: 3 },
+      ]
     },
     options: {
       maintainAspectRatio: false,
-      indexAxis: 'y',
-      plugins: { legend: { display: false } },
-      scales: { x: { grid: { color: '#f1f4fa' } }, y: { grid: { display: false } } }
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, grid: { color: '#f1f4fa' } }
+      }
     }
   });
 
-  // Bottom funnel growth
-  new Chart(document.getElementById('chartBF'), {
-    type: 'line',
-    data: {
-      labels: ['Jan','Feb','Mar'],
-      datasets: [{
-        label: 'Bottom funnel clicks (28-day)',
-        data: [554, 797, 956],
-        borderColor: BRAND, backgroundColor: 'rgba(22,59,141,0.08)', fill: true, tension: 0.3, borderWidth: 2.5,
-        pointBackgroundColor: BRAND, pointRadius: 5, pointHoverRadius: 7
-      }]
-    },
-    options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true, grid: { color: '#f1f4fa' } }, x: { grid: { display: false } } } }
-  });
-
-  // Referral sources
-  new Chart(document.getElementById('chartRef'), {
+  // GSC clicks and impressions bar dual
+  new Chart(document.getElementById('chartGSC'), {
     type: 'bar',
     data: {
-      labels: ['Google','x0pa internal','Bing','Google Ads','YouTube','ChatGPT','Yahoo'],
-      datasets: [{ data: [74868, 8877, 6231, 3375, 1777, 487, 555], backgroundColor: BRAND, borderRadius: 4 }]
+      labels: months,
+      datasets: [
+        { label: 'Clicks', data: [5431, 8382, 18204], backgroundColor: BRAND, borderRadius: 5, yAxisID: 'y' },
+        { label: 'Impressions', data: [1644057, 2276523, 5147901], backgroundColor: BRAND_FAINT, borderRadius: 5, yAxisID: 'y1' },
+      ]
     },
-    options: { maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { color: '#f1f4fa' }, beginAtZero: true }, y: { grid: { display: false } } } }
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: { type: 'linear', position: 'left', beginAtZero: true, title: { display: true, text: 'Clicks' }, grid: { color: '#f1f4fa' } },
+        y1: { type: 'linear', position: 'right', beginAtZero: true, title: { display: true, text: 'Impressions' }, grid: { display: false } },
+        x: { grid: { display: false } }
+      }
+    }
   });
 
-  // Device mix
-  new Chart(document.getElementById('chartDevice'), {
-    type: 'doughnut',
+  // AEO by platform monthly
+  new Chart(document.getElementById('chartAEO'), {
+    type: 'bar',
     data: {
-      labels: ['Chrome Mobile (40.8%)','Mobile Safari (22.0%)','Desktop Chrome (21.1%)','Edge (6.6%)','Other (9.5%)'],
-      datasets: [{ data: [40.8, 22.0, 21.1, 6.6, 9.5], backgroundColor: [BRAND, '#4682e8', ACCENT, '#8b5cf6', GREY], borderWidth: 0 }]
+      labels: months,
+      datasets: [
+        { label: 'ChatGPT', data: [179, 388, 483], backgroundColor: BRAND, borderRadius: 4 },
+        { label: 'Perplexity', data: [55, 62, 65], backgroundColor: ACCENT, borderRadius: 4 },
+        { label: 'Gemini', data: [15, 29, 35], backgroundColor: '#8b5cf6', borderRadius: 4 },
+        { label: 'Copilot', data: [40, 27, 17], backgroundColor: '#0ea5e9', borderRadius: 4 },
+        { label: 'Claude', data: [1, 12, 21], backgroundColor: SUCCESS, borderRadius: 4 },
+      ]
     },
-    options: { maintainAspectRatio: false, cutout: '55%' }
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, beginAtZero: true, grid: { color: '#f1f4fa' } }
+      }
+    }
+  });
+
+  // Competitive: organic traffic monthly line
+  new Chart(document.getElementById('chartCompTraffic'), {
+    type: 'line',
+    data: {
+      labels: monthsQ,
+      datasets: [
+        { label: 'x0pa.com', data: [8649, 9039, 17185, 30385], borderColor: BRAND, backgroundColor: 'rgba(22,59,141,0.08)', fill: false, tension: 0.3, borderWidth: 2.5, pointRadius: 5 },
+        { label: 'smartrecruiters.com', data: [154273, 161296, 156184, 147586], borderColor: ACCENT, fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+        { label: 'eightfold.ai', data: [30219, 32744, 33814, 31988], borderColor: '#8b5cf6', fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+        { label: 'impress.ai', data: [487, 499, 557, 492], borderColor: GREY, fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: { type: 'logarithmic', title: { display: true, text: 'Monthly organic traffic (log)' }, grid: { color: '#f1f4fa' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Competitive: keyword monthly line
+  new Chart(document.getElementById('chartCompKW'), {
+    type: 'line',
+    data: {
+      labels: monthsQ,
+      datasets: [
+        { label: 'x0pa.com', data: [2497, 3073, 5639, 6462], borderColor: BRAND, backgroundColor: 'rgba(22,59,141,0.08)', fill: false, tension: 0.3, borderWidth: 2.5, pointRadius: 5 },
+        { label: 'smartrecruiters.com', data: [34995, 48722, 46552, 29469], borderColor: ACCENT, fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+        { label: 'eightfold.ai', data: [7427, 7418, 6701, 4944], borderColor: '#8b5cf6', fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+        { label: 'impress.ai', data: [124, 100, 88, 74], borderColor: GREY, fill: false, tension: 0.3, borderWidth: 2, pointRadius: 4 },
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: { type: 'logarithmic', title: { display: true, text: 'Ranking keywords (log)' }, grid: { color: '#f1f4fa' } },
+        x: { grid: { display: false } }
+      }
+    }
   });
 }
 </script>

@@ -651,6 +651,68 @@ h3.sh { font-size: 14px; font-weight: 700; color: var(--ink); margin: 16px 0 12p
 
 <!-- ─────────── Competitive ─────────── -->
 <div class="tab-panel" id="panel-competitive">
+
+  <div class="section">
+    <div class="section-head">
+      <div class="section-title">Domain Rating &amp; Authority — 12-Month Growth</div>
+      <div class="section-desc">X0PA's domain authority grew across every dimension this year. DR +5 points. Referring domains more than doubled.</div>
+    </div>
+    <div class="section-body">
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Domain Rating</div>
+          <div class="kpi-val">54</div>
+          <div class="kpi-delta up">+5 YoY (49 → 54)</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Referring domains</div>
+          <div class="kpi-val">1,034</div>
+          <div class="kpi-delta up">+584 YoY (+130%)</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Backlinks</div>
+          <div class="kpi-val">5,387</div>
+          <div class="kpi-delta up">+3,100 YoY</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Organic keywords</div>
+          <div class="kpi-val">5,523</div>
+          <div class="kpi-delta up">+183% YTD</div>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <div class="chart-wrap">
+          <div class="chart-title">Domain Rating — 12-Month Trajectory</div>
+          <div class="chart-subtitle">Apr 2025 → Apr 2026</div>
+          <div class="chart-box"><canvas id="chartDR"></canvas></div>
+        </div>
+        <div class="chart-wrap">
+          <div class="chart-title">Referring Domains — 12-Month Trajectory</div>
+          <div class="chart-subtitle">Apr 2025 → Apr 2026</div>
+          <div class="chart-box"><canvas id="chartRefdomYoY"></canvas></div>
+        </div>
+      </div>
+
+      <h3 class="sh">Competitive Authority Snapshot (17 April 2026)</h3>
+      <table class="dt">
+        <thead><tr><th>Metric</th><th>X0PA AI</th><th>impress.ai</th><th>Eightfold AI</th><th>SmartRecruiters</th></tr></thead>
+        <tbody>
+          <tr class="highlight"><td>Domain Rating</td><td>54 <span class="pill success">+5 YoY</span></td><td>53</td><td>78</td><td>87</td></tr>
+          <tr><td>Backlinks</td><td>5,387</td><td>3,238</td><td>1.8M</td><td>40.6M</td></tr>
+          <tr><td>Referring domains</td><td>1,038 <span class="pill success">+130% YoY</span></td><td>702</td><td>10,213</td><td>25,265</td></tr>
+          <tr><td>Organic keywords</td><td>5,523 <span class="pill success">+183% YTD</span></td><td>58</td><td>3,419</td><td>20,233</td></tr>
+          <tr><td>Organic traffic (est.)</td><td>28,078</td><td>476</td><td>32,801</td><td>150,659</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout success">
+        <strong>X0PA is the only brand in the set with an actively growing authority profile.</strong>
+        DR +5, refdomains +130%, keywords +183% over the past 12 months. Smaller competitors (impress.ai) lost DR. Eightfold dropped one DR point. SmartRecruiters is stable at 87 but their keyword count declined 16%. Authority is compounding — this is the foundation that supports the commercial-keyword ranking gains you'll see in the next section.
+      </div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-head">
       <div class="section-title">Competitive Trajectory</div>
@@ -1010,6 +1072,50 @@ function initCharts(){
       maintainAspectRatio: false,
       scales: {
         y: { type: 'logarithmic', title: { display: true, text: 'Monthly organic traffic (log)' }, grid: { color: '#f1f4fa' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Domain Rating 12-month
+  new Chart(document.getElementById('chartDR'), {
+    type: 'line',
+    data: {
+      labels: ['Apr 25','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 26','Feb','Mar','Apr 26'],
+      datasets: [{
+        label: 'Domain Rating',
+        data: [49, 50, 47, 48, 49, 51, 54, 54, 54, 54, 54, 54, 54],
+        borderColor: BRAND, backgroundColor: 'rgba(22,59,141,0.08)', fill: true,
+        tension: 0.3, borderWidth: 2.5, pointRadius: 4
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: false, min: 45, max: 60, title: { display: true, text: 'DR' }, grid: { color: '#f1f4fa' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Refdomains 12-month
+  new Chart(document.getElementById('chartRefdomYoY'), {
+    type: 'line',
+    data: {
+      labels: ['May 25','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan 26','Feb','Mar','Apr 26'],
+      datasets: [{
+        label: 'Referring domains',
+        data: [450, 487, 558, 629, 721, 877, 901, 955, 986, 995, 1013, 1034],
+        borderColor: SUCCESS, backgroundColor: 'rgba(5,150,105,0.08)', fill: true,
+        tension: 0.3, borderWidth: 2.5, pointRadius: 4
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, title: { display: true, text: 'Ref domains' }, grid: { color: '#f1f4fa' } },
         x: { grid: { display: false } }
       }
     }
